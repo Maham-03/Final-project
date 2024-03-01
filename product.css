@@ -1,0 +1,130 @@
+body{
+    background-color: rgba(143, 198, 202, 0.842);
+}
+
+.logo img {
+    height: 50px; 
+    border-radius: 15px;
+}
+
+.nav-link {
+    font-weight: bold;
+  
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #031D44;
+    padding: 10px 0px;
+    margin: 0px 10px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
+  }
+  
+  .nav-link:hover {
+    opacity: 1;
+  }
+  
+  .nav-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #031D44;
+  }
+  
+  .nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+  }
+  
+  .nav-link-ltr:hover::before {
+    width: 100%;
+  }
+
+  
+h2.product-title {
+    margin: 0;
+}
+
+.image-container{
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+
+}
+
+.image-container div {
+    flex-basis: calc(33.33% - 20px); 
+    width: 50%;
+    height: 50%;
+    border: 2px solid rgba(177, 232, 236, 0.842);
+    overflow: hidden;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    object-fit: cover;
+}
+
+.image-container div:hover {
+    transform: translateY(-10px); 
+    box-shadow: 6px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+div{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .price h3 {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container div {
+        flex-basis: calc(50% - 20px); 
+    }
+}
+

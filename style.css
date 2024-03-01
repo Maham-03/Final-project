@@ -1,0 +1,163 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(143, 198, 202, 0.842);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Montserrat:wght@600&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+
+#p {
+    text-shadow: 0 0 7px rgba(255, 255, 255, .3), 0 0 3px rgba(255, 255, 255, .3);
+    font-size: 2rem;
+}
+
+.contain {
+    font-family: 'Roboto';
+    background-color: black;
+    color: #e5e5e5;
+    font-size: 2rem;
+    text-transform: uppercase;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation {
+    height: 50px;
+    overflow: hidden;
+    margin-left: 2rem;
+}
+
+.animation>div>div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+    margin-bottom: 2.81rem;
+    display: inline-block;
+}
+
+.animation div:first-child {
+    animation: text-animation 4s infinite;
+}
+
+.first div {
+    background-color: #20a7d8bb;
+}
+
+.second div {
+    background-color: #1ecd93;
+}
+
+.third div {
+    background-color: #05c1b1dc;
+}
+
+@keyframes text-animation {
+    0% {
+        margin-top: 0rem;
+    }
+
+    10% {
+        margin-top: -1rem;
+    }
+
+    20% {
+        margin-top: -2rem;
+    }
+
+    30% {
+        margin-top: -3rem;
+    }
+
+    40% {
+        margin-top: -4rem;
+    }
+
+    50% {
+        margin-top: -5rem;
+    }
+
+    60% {
+        margin-top: -6rem;
+    }
+
+    70% {
+        margin-top: -5rem;
+    }
+
+    80% {
+        margin-top: -4rem;
+    }
+
+    90% {
+        margin-top: -3rem;
+    }
+
+    100% {
+        margin-top: 0rem;
+    }
+}
+
+
+
+h1 {
+    animation: 4s anim-popoutin ease infinite;
+}
+
+.para {
+    font-style: italic;
+    /* font-size: 2rem; */
+}
+
+/*  */
+
+body {
+    font-family: 'Roboto';
+
+    /* background-color:black; */
+    background-color: #0A2647;
+}
+
+* {
+    margin: 0PX;
+    padding: 0px;
+}
+
+.nav-link {
+    font-weight: bold;
+    /* font-size: 14px; */
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #031D44;
+    padding: 10px 0px;
+    margin: 0px 10px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #031D44;
+}
+
+.nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+    width: 100%;
+}
